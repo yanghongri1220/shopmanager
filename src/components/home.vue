@@ -16,14 +16,14 @@
 			</el-header>
 			<el-container>
 				<el-aside width="200px">
-					<el-menu default-active="2" unique-opened class="el-menu-vertical-demo" active-text-color="#00aaff">
+					<el-menu router default-active="2" unique-opened class="el-menu-vertical-demo" active-text-color="#00aaff">
 						<el-submenu index="1">
 							<template slot="title">
 								<i class="el-icon-location"></i>
 								<span>用户管理</span>
 							</template>
 							<el-menu-item-group>
-								<el-menu-item index="1-1"><i class="el-icon-s-grid"></i>用户列表</el-menu-item>
+								<el-menu-item index="users"><i class="el-icon-s-grid"></i>用户列表</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>
 						<el-submenu index="2">
@@ -67,7 +67,10 @@
 						</el-submenu>
 					</el-menu>
 				</el-aside>
-				<el-main>Main</el-main>
+				<el-main>
+					<router-view>
+					</router-view>
+				</el-main>
 			</el-container>
 		</el-container>
 	</div>

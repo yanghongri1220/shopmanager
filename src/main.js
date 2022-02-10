@@ -8,10 +8,12 @@ import '../node_modules/element-ui/lib/theme-chalk/index.css'
 import './assets/base.css'
 import axios from 'axios'
 import Http from './http/axios.js'
-
+import moment from'moment'
 Vue.use(ElementUI);
 Vue.use(Http);
-
+Vue.filter("fmtDate",(v)=>{
+	return moment(v).format("YYYY-MM-DD")
+})
 
 Vue.config.productionTip = false
 // Vue.prototype.$http = axios
